@@ -25,7 +25,7 @@ public class PackageInfo
                 "zverev-iv"
                 },
             //SOFTWARE SPECIFIC SECTION
-            Title = "Fx",
+            Title = "fx",
             Authors = new[] {
                 "Anton Medvedev (antonmedv)"
                 },
