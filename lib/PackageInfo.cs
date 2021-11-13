@@ -18,7 +18,7 @@ public class PackageInfo
         get => new ChocolateyPackSettings
         {
             //PACKAGE SPECIFIC SECTION
-            Id = "fx",
+            Id = "fx-win",
             Version = "20.0.2",
             PackageSourceUrl = new Uri("https://github.com/user/choco-fx/"),
             Owners = new[] {
