@@ -1,8 +1,8 @@
-# choco-template
+# choco-fx
 
-![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000) [![License: Unlicense](https://img.shields.io/badge/License-Unlicense-yellow.svg)](https://raw.githubusercontent.com/zverev-iv/choco-template/main/LICENSE)
+![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000) [![License: Unlicense](https://img.shields.io/badge/License-Unlicense-yellow.svg)](https://raw.githubusercontent.com/zverev-iv/choco-fx/main/LICENSE)
 
-> Simple chocolatey package template with cakebuild.net support
+> Chocolatey package for fx
 
 ## Author
 
