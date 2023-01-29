@@ -1,4 +1,5 @@
-#addin nuget:?package=Cake.FileHelpers&version=4.0.1
+#addin nuget:?package=Cake.FileHelpers&version=6.0.0
+#addin nuget:?package=Cake.Json&version=7.0.1
 
 #load "lib/PackageInfo.cs"
 
@@ -12,11 +13,7 @@ var target = Argument("target", "Publish");
 // SETUP / TEARDOWN
 ///////////////////////////////////////////////////////////////////////////////
 
-Setup<PackageInfo>(setupContext => new PackageInfo
-{
-    PackageVersion = Argument("packageVersion", "20.0.2"),
-    Package64Url = Argument("url64bit", "https://github.com/antonmedv/fx/releases/download/20.0.2/fx-win.exe.zip")
-});
+Setup<PackageInfo>(setupContext => DeserializeJsonFromFile<PackageInfo>("config.json"));
 
 Teardown(ctx =>
 {
@@ -26,6 +23,12 @@ Teardown(ctx =>
 ///////////////////////////////////////////////////////////////////////////////
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
+
+Task("Print config")
+    .Does<PackageInfo>(data =>
+{
+	Information(SerializeJson<PackageInfo>(data));
+});
 
 Task("Clean")
     .Does<PackageInfo>(data =>
